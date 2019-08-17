@@ -111,7 +111,7 @@ a[1:] // 2,3,4,5
 a[:3] // 1,2,3
 ```
 
-## 3.1切片
+## 3.1 切片
 
 共享存储结构
 
@@ -119,4 +119,34 @@ ptr *Elem
 len int 元素的个数
 cap int 内部数组的容量
 
+## 3.2 Map
 
+在访问key不存在时，会返回0值，不会返回nil
+
+m := map[string]int{"one":1, "two":2, "three":3}
+m1 := map[string]int{}
+m1["one"] = 1
+/* initial capacity */
+m2 := make(map[string]int, 10)
+
+# 3.3 map与工厂模式
+
+# 4.字符串
+1.string是数据类型，不是引用或指针类型
+2.string是只读的byte slice, len函数可以包含所有的byte数
+3.string的byte数组可以存放任何数据
+
+# 4.1 Unicode UTF8
+- 1.Unicode是一种字符集(code point)
+- 2.UTF8是unicode的存储实现(转换为字节序列的规则)
+
+# 4.2 string 常用包
+string
+
+# 5 函数
+- 1.可以有多个返回值
+- 2.所有参数都是值传递 slice, map, channel会有传引用的错觉
+- 3.函数可以作为变量的值
+- 4.函数可以作为参数和返回值
+
+# 5.1 可变参数
