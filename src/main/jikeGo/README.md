@@ -151,3 +151,24 @@ string
 
 # 5.1 可变参数
 # 5.2 defer
+
+# 6.面向对象编程
+
+```$type
+定义
+type Employee struct {
+    Id string
+    Name string
+    Age int
+}
+
+初始化
+e := Employee{"0", "Bob", 20}
+e1 := Employee{Name:"Mike", Age: 30}
+e2 := new(Employee) // 注意这里返回的引用/指针，相当于 e := &Employee{}
+e2.Id = "2" // 与其它主要编程语言的差异:通过实例的指针访问成员不需要使用  ->
+e2.Age = 22
+e2.Name = "Rose"
+
+
+```
