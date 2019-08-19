@@ -19,18 +19,11 @@ func (p *Pet) speakTo (host string) {
 }
 
 type Dog struct {
-	pet *Pet
+	Pet
 }
 
-func (dog *Dog) speak() {
-	//dog.pet.speak()
+func (d *Dog) speak() {
 	fmt.Println("Dog speak!")
-}
-
-func (dog *Dog) speakTo(host string) {
-	//dog.pet.speakTo(host)
-	dog.speak()
-	fmt.Println("", host)
 }
 
 func TestDog(t *testing.T) {
