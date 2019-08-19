@@ -175,8 +175,37 @@ e2.Name = "Rose"
 
 # 7.接口
 
-# 7.1 接口变量
+## 7.1 接口变量
 
-# 7.2 自定义类型
+## 7.2 自定义类型
 
+## 7.3 空接口与断言
+1.空接口可以表示任何类型
+2.通过断言来将空接口转换为指定类型
+v,ok := p.(int) // ok=true时为转换成功
+
+# 8.错误
+1.没有异常机制
+2.error类型实现了error接口
+type error interface {
+ 
+}
+
+3.可以通过errors.New来快速创建错误实例
+
+## 8.1 panic
+panic用于不可以恢复的错误
+panic退出前会执行defer指定的内容
+
+os.Exit退出时不会调用defer指定的函数
+os.Exit退出时不输出当前调用栈信息
+
+## 8.2 recover
+
+形成僵尸服务进程，导致health check失效
+Let it crash! 往往时我们恢复不确定性错误的最好方法
+
+defer func() {
+  if err:= revoer(); 
+}
 
