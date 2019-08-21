@@ -60,7 +60,7 @@ while 条件循环
 while(n<5)
 
 n := 0
-for n < 5 {
+for n u< 5 {
    n++
    fmt.Println(n)
 }
@@ -220,3 +220,10 @@ defer func() {
 - 2.不同包的init函数按照包导入的依赖关系决定执行顺序
 - 3.每个包可以有多个init函数
 - 4.包的每个源文件也可以有多个init函数，这点比较特殊
+
+# 9.2 Go未解决的问题
+- 1.当前包下的vendor目录
+- 2.向上级目录查找，直到找到src下的vendor目录
+- 3.在gopath下面查找依赖
+- 4.在goroot目录下查找
+- 5. godep glide dep
