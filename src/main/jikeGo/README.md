@@ -227,3 +227,8 @@ defer func() {
 - 3.在gopath下面查找依赖
 - 4.在goroot目录下查找
 - 5. godep glide dep
+
+
+# 10.读写锁
+  sync.Mutex
+  sync.WaitGroup
